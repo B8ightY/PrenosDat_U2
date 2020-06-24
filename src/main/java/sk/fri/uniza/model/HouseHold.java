@@ -40,7 +40,7 @@ public class HouseHold {
     @ApiModelProperty(example = "Slovakia") // Príklad pre swagger doku.
     private String state;
     @NotEmpty
-    @Pattern(regexp = "^\d*$")
+    @Pattern(regexp = "^\\d*$")
     @ApiModelProperty(example = "01008") // Príklad pre swagger doku.
     private String zip;
     @Valid
