@@ -33,8 +33,9 @@ import java.time.LocalDateTime;
         @JsonSubTypes.Type(value = DataString.class, name = "string")
 })
 // Slúži iba na tvorbu swagger dokumentácie
-@ApiModel(value = "Data", discriminator = "type", subTypes = {DataDouble.class
-        , DataInteger.class,
+@ApiModel(value = "Data", discriminator = "type", subTypes = {
+        DataDouble.class,
+        DataInteger.class,
         DataString.class})
 
 public abstract class AbstractData<T extends Object> {
