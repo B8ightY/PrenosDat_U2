@@ -29,7 +29,6 @@ import java.util.Set;
 public class HouseHold {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @ApiModelProperty(accessMode = ApiModelProperty.AccessMode.READ_ONLY)
     // Swagger nebude zobrazovať atribút
     private Long id;
     @NotEmpty

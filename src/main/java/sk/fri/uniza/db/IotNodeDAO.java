@@ -19,16 +19,6 @@ public class IotNodeDAO extends AbstractDAO<IotNode> {
     }
 
     public IotNode create(IotNode iotNode) {
-        // Skusil som aj vytvorit novy objekt IotNode a ulozit data pomocou jeho metod
-        /*System.out.println("Name: " + _iotNode.getName());
-        System.out.println("Household: " + _iotNode.getHouseHold().getCity());
-
-        HouseHold houseHold = currentSession().get(HouseHold.class, _iotNode.getHouseHold().getId());
-
-        IotNode iotNode = new IotNode();
-        iotNode.setName(_iotNode.getName());
-        iotNode.setHouseHold(houseHold);*/
-
         currentSession().save(iotNode);
         return iotNode;
     }

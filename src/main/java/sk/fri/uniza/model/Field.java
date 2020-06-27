@@ -24,7 +24,7 @@ public class Field {
     private String unit;
 
     @NotEmpty
-    private String descripton;
+    private String description;
 
     @OneToMany(fetch = FetchType.LAZY,
             mappedBy = "field", cascade = CascadeType.REMOVE)
@@ -68,11 +68,11 @@ public class Field {
         return name != null ? name.hashCode() : 0;
     }
 
-    public String getDescripton() {
-        return descripton;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripton(String descripton) {
-        this.descripton = descripton;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

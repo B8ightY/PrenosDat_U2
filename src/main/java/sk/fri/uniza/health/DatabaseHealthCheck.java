@@ -45,18 +45,18 @@ public class DatabaseHealthCheck extends HealthCheck {
         Field airTemp = new Field();
         airTemp.setName("airTemp"); //NativeId - musí sa vytvoriť manuálne
         airTemp.setUnit("°C");
-        airTemp.setDescripton("Teplota vzduchu");
+        airTemp.setDescription("Teplota vzduchu");
         airTemp = fieldDAO.create(airTemp);
 
         Field windSpeed = new Field();
         windSpeed.setName("windSpeed"); //NativeId - musí sa vytvoriť manuálne
         windSpeed.setUnit("m/s");
-        windSpeed.setDescripton("Rýchlosť vetra");
+        windSpeed.setDescription("Rýchlosť vetra");
         windSpeed = fieldDAO.create(windSpeed);
 
         Field weather = new Field();
         weather.setName("weather"); //NativeId - musí sa vytvoriť manuálne
-        weather.setDescripton("Aktuálne počasie");
+        weather.setDescription("Aktuálne počasie");
         weather = fieldDAO.create(weather);
 
         DataDouble dataDouble = new DataDouble();

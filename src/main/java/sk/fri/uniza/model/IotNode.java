@@ -17,15 +17,14 @@ import javax.persistence.*;
 @Entity
 public class IotNode {
 
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@ApiModelProperty(accessMode = ApiModelProperty.AccessMode.READ_ONLY)
+    @Id
     private Long id;
 
     @NotEmpty
     private String Name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "household_id", nullable = false)
     private HouseHold houseHold;
 
