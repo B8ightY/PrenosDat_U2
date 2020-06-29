@@ -2,8 +2,6 @@ package sk.fri.uniza.db;
 
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
-import sk.fri.uniza.model.Field;
-import sk.fri.uniza.model.HouseHold;
 import sk.fri.uniza.model.IotNode;
 
 import java.util.List;
@@ -32,7 +30,8 @@ public class IotNodeDAO extends AbstractDAO<IotNode> {
     }
 
     public List<IotNode> findByHouseHold(Long houseHoldId) {
-        return list(namedQuery("IotNode_findByHouseHoldId"));
+        return list(namedQuery("IotNode_findByHouseHoldId")
+                .setParameter("id", houseHoldId));
     }
 
     public List<IotNode> allIotNodes() {

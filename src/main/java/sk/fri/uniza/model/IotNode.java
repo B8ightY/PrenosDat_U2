@@ -1,14 +1,12 @@
 package sk.fri.uniza.model;
 
-import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
 
 @org.hibernate.annotations.NamedQueries({
         @org.hibernate.annotations.NamedQuery(
                 name = "IotNode_findByHouseHoldId",
-                query = "from IotNode where household_id = :houseHoldId"),
+                query = "from IotNode where household_id = :id"),
         @org.hibernate.annotations.NamedQuery(
                 name = "IotNode_All",
                 query = "from IotNode"),

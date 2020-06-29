@@ -3,10 +3,7 @@ package sk.fri.uniza.resources;
 import io.dropwizard.hibernate.UnitOfWork;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import sk.fri.uniza.db.FieldDAO;
 import sk.fri.uniza.db.IotNodeDAO;
-import sk.fri.uniza.model.Field;
-import sk.fri.uniza.model.HouseHold;
 import sk.fri.uniza.model.IotNode;
 
 import javax.validation.Valid;

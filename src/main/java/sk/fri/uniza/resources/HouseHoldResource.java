@@ -82,8 +82,8 @@ public class HouseHoldResource {
     @POST /*JAX-RS*/
     @UnitOfWork //Otvorí novú hibernate session // Dropwizard
     @ApiOperation(value = "Pridanie novej domácnosti")
-    public HouseHold createHouseHold(@Valid HouseHold houshold) {
-        return houseHoldDAO.create(houshold);
+    public HouseHold createHouseHold(@Valid HouseHold household) {
+        return houseHoldDAO.create(household);
     }
 
     @PUT /*JAX-RS*/
@@ -92,11 +92,10 @@ public class HouseHoldResource {
     @ApiOperation(value = "Úprava existujúcej domácnosti")
     public HouseHold updateHouseHold(
             @ApiParam(value = "ID", required = true) @PathParam("id") Long id,
-            @Valid HouseHold houshold) {
-        houshold.setId(id);
-        return houseHoldDAO.update(houshold);
+            @Valid HouseHold household) {
+        household.setId(id);
+        return houseHoldDAO.update(household);
     }
-
 
     @GET
     @UnitOfWork //Otvorí novú hibernate session
@@ -108,7 +107,7 @@ public class HouseHoldResource {
     @GET //HTTP metóda
     @Path("{id}") // Jedna vetva hlavnej adresy /household
     @UnitOfWork //Otvorí novú hibernate session
-    @ApiOperation(value = "Údaje o konkrétnej domácnosť")
+    @ApiOperation(value = "Údaje o konkrétnej domácnosti")
     public HouseHold getHouseHold(
             @ApiParam(value = "ID", required = true) @PathParam("id") Long id) {
         return houseHoldDAO.findById(id);
